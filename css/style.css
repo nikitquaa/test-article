@@ -269,6 +269,7 @@ aside {
     font-size: 22px;
     line-height: 136%;
     margin-bottom: 17px;
+    max-width: 445px;
 }
 
 .read-more__title span {
@@ -387,6 +388,7 @@ aside {
     .read-more__title {
         font-size: 19px;
         line-height: 147%;
+        max-width: 390px;
     }
 
     aside img {
@@ -410,13 +412,16 @@ aside {
     }
 }
 
-@media only screen and (max-width: 603px) {
+@media only screen and (max-width: 602px) {
     .read-more::before {
         right: calc(100% - 360px);
     }
     .read-more__title span::before {
         bottom: -3px;
         left: -5px;
+    }
+    .read-more__title {
+        max-width: 210px;
     }
 }
 
@@ -444,10 +449,16 @@ aside {
         right: calc(100% - 520px);
         top: -10px;
     }
+    .read-more__title {
+        max-width: 385px;
+    }
 }
 
 @media only screen and (max-width: 442px) {
     .read-more::before {
         right: calc(100% - 345px);
+    }
+    .read-more__title {
+        max-width: 215px;
     }
 }
