@@ -1,0 +1,453 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+* {
+    box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+
+body {
+    font-family: "Roboto", sans-serif;
+    color: #000;
+}
+
+.article {
+    padding: 64px 0;
+}
+
+.container {
+    max-width: 992px;
+    margin: 0 auto;
+    padding: 0 80px;
+    box-sizing: content-box;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+h3 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 111%;
+    max-width: 680px;
+    ;
+}
+
+.paragraph {
+    font-size: 17px;
+    line-height: 153%;
+    max-width: 680px;
+}
+
+strong {
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 153%;
+}
+
+ol {
+    list-style: decimal;
+    padding-left: 24px;
+    font-size: 17px;
+    line-height: 153%;
+}
+
+ol>li {
+    padding-left: 2px;
+}
+
+ol>li:not(:last-child) {
+    margin-bottom: 12px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.mb12 {
+    margin-bottom: 12px;
+}
+
+.mt48 {
+    margin-top: 48px;
+}
+
+.mt64 {
+    margin-top: 64px;
+}
+
+.figure picture>img {
+    width: 100%;
+    height: 100%;
+    max-width: 992px;
+    margin: auto;
+    display: flex;
+}
+
+.figure figcaption {
+    max-width: 680px;
+    font-size: 15px;
+    line-height: 160%;
+    margin-top: 8px;
+}
+
+.aside__wrap {
+    display: grid;
+    grid-template-columns: 680px auto;
+    gap: 48px;
+}
+
+.aside__wrap > div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+aside {
+    font-size: 13px;
+    line-height: 154%;
+    color: #0068ff;
+    max-width: 264px;
+}
+
+.read-more {
+    max-width: 680px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    padding: 28px 32px;
+    position: relative;
+    overflow: hidden;
+}
+
+.read-more::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: calc(100% - 600px);
+    background-image: url('../images/Arrow.png');
+    width: 110px;
+    height: 57px;
+}
+
+.read-more__title {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 136%;
+    margin-bottom: 17px;
+}
+
+.read-more__title span {
+    position: relative;
+}
+
+.read-more__title span::before {
+    content: '';
+    position: absolute;
+    width: calc(100% + 7px);
+    height: 1px;
+    background: #ccc;
+    bottom: 0;
+    left: 1px;
+}
+
+.read-more__item {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 6px 0 16px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.read-more__item:last-child {
+    padding-bottom: 0;
+}
+
+.read-more__item>img {
+    padding-top: 4px;
+    width: 90px;
+    height: 48px;
+    flex-shrink: 0;
+}
+
+.read-more__item__text {
+    font-size: 17px;
+    line-height: 153%;
+    color: #0068ff;
+}
+
+.blockquote {
+    max-width: 680px;
+    padding-left: 32px;
+    border-left: 1px solid #000;
+}
+
+.blockquote blockquote p {
+    font-size: 17px;
+    line-height: 153%;
+}
+
+.blockquote__author {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.blockquote__author>div {
+    display: flex;
+    flex-direction: column;
+}
+
+.blockquote__author__name {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 133%;
+}
+
+.blockquote__author__role {
+    font-size: 13px;
+    line-height: 154%;
+}
+
+
+
+@media only screen and (max-width: 1200px) {
+    .aside__wrap {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    aside {
+        max-width: 380px;
+        padding-left: 32px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .article {
+        padding: 48px 0;
+    }
+
+    h3 {
+        font-size: 24px;
+        line-height: 100%;
+    }
+
+    .section,
+    .aside__wrap {
+        gap: 16px;
+    }
+
+    .mt48 {
+        margin-top: 28px;
+    }
+
+    .mt64 {
+        margin-top: 48px;
+    }
+
+    aside {
+        line-height: 138%;
+    }
+
+    .read-more__title {
+        font-size: 19px;
+        line-height: 147%;
+    }
+
+    aside img {
+        width: 190px;
+        height: auto;
+    }
+
+    aside a {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .blockquote {
+        padding-left: 16px;
+    }
+
+    .read-more::before {
+        top: -2px;
+        right: calc(100% - 535px);
+    }
+}
+
+@media only screen and (max-width: 603px) {
+    .read-more::before {
+        right: calc(100% - 360px);
+    }
+    .read-more__title span::before {
+        bottom: -3px;
+        left: -5px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    .read-more {
+        padding: 20px 16px 24px 16px;
+    }
+
+    .read-more__item>img {
+        display: none;
+    }
+
+    aside {
+        width: 169px;
+    }
+
+    aside img {
+        width: 169px;
+    }
+    .read-more::before {
+        right: calc(100% - 520px);
+        top: -10px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .read-more::before {
+        right: calc(100% - 345px);
+    }
+}
