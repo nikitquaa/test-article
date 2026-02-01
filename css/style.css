@@ -402,6 +402,10 @@ aside {
         gap: 12px;
     }
 
+    .aside__wrap > div {
+        gap: 16px;
+    }
+
     .blockquote {
         padding-left: 16px;
     }
